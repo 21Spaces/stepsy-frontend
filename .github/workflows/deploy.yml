@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Install OIDC Client from Core Package
-        run: bun install @actions/core@1.6.0 @actions/http-client
-
       - name: Build
         run: bun run build
 
