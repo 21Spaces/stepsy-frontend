@@ -1,0 +1,72 @@
+name: "🎨 Frontend Task"
+description: For UI/UX changes, Vue components, map interactions, or layout fixes.
+title: "[Frontend] "
+labels: ["frontend", "ui"]
+assignees: []
+projects:
+  - your-org/stepsy
+
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 🎯 Goal
+      description: Briefly describe what needs to be done or improved.
+      placeholder: "Implement fog reveal effect on map when user moves..."
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 🧱 Type
+      description: What type of change is this?
+      options:
+        - New feature
+        - UI improvement
+        - Bug fix
+        - Refactor
+        - Integration (API / GraphQL)
+      default: 0
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: ⚙️ Expected Behavior
+      description: Describe how the feature should behave from a user’s perspective.
+      placeholder: "When user pans away from their location, a 'Refocus' button should appear..."
+
+  - type: textarea
+    id: ui
+    attributes:
+      label: 🖼️ UI Details
+      description: Add design notes, layout specs, or links to Figma/screenshots if available.
+      placeholder: "Button placed bottom-right, uses map accent color, 8px corner radius..."
+
+  - type: textarea
+    id: tech
+    attributes:
+      label: 💻 Technical Notes
+      description: Mention components, composables, or dependencies affected.
+      placeholder: "Affects MapView.vue and useLocation composable..."
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: ✅ Tasks
+      description: List the steps needed to complete this issue.
+      placeholder: |
+        - [ ] Add new component `RefocusButton.vue`
+        - [ ] Listen to map move events
+        - [ ] Animate map recenter on click
+        - [ ] Hide button when centered
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: done
+    attributes:
+      label: 📦 Definition of Done
+      options:
+        - label: Feature implemented and tested
+        - label: Meets UX/design requirements
+        - label: No console or build errors
+        - label: PR reviewed and merged
