@@ -1,0 +1,14 @@
+query AllUsers {
+  users {
+    name
+  }
+}
+
+query ByName($name: String!) {
+  user(name: $name) {
+    _id
+    name
+    email
+    age
+  }
+}
