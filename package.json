@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "bunx --bun vite",
-    "build": "bunx --bun vite build",
+    "build": "vite build",
     "preview": "bunx --bun vite preview",
     "codegen": "graphql-codegen --config codegen.ts"
   },

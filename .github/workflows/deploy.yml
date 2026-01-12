@@ -25,12 +25,12 @@ jobs:
         with:
           install: true
       - name: Install dependencies
-        run: mise exec -- bun install
+        run: npm install
 
       - name: Build with environment variables
         env:
           VITE_APOLLO_URL: ${{ secrets.VITE_APOLLO_URL }}
-        run: mise run build
+        run: npm run build
 
       - name: Build And Deploy
         id: builddeploy
